@@ -1,0 +1,22 @@
+table.t_layout {
+  border-collapse: collapse;
+  border: none;
+  width: 100%;
+}
+table.t_layout td {
+  border: none;
+  margin: 0 0 0 0;
+  padding: 10px 10px 10px 10px;
+}
+
+table.t_tasks {
+  border-collapse: collapse;
+  border: none;
+  width: 90%;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+table.t_tasks td {
+  border: none;
+  padding: 10px 10px 10px 10px;
+}
