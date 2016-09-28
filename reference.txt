@@ -1,0 +1,15 @@
+
+records['2016']['08']['16']['work_start']
+                           ['work_end'  ]
+                           ['work_rest' ]
+                           ['work_hr'   ]
+                           ['tasks_hr'  ]
+                           ['tasks'     ][n]['tid']
+                                            ['hr']
+
+taskMaster[tid]['name']
+               ['outdated']
+
+config['df_start']
+      ['df_end']
+      ['df_rest']

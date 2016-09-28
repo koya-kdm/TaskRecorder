@@ -1,22 +1,68 @@
 table.t_layout {
   border-collapse: collapse;
   border: none;
-  width: 100%;
 }
 table.t_layout td {
   border: none;
   margin: 0 0 0 0;
-  padding: 10px 10px 10px 10px;
+  padding: 0px 10px 0px 10px;
 }
 
 table.t_tasks {
   border-collapse: collapse;
   border: none;
-  width: 90%;
-  margin-left: 20px;
+  border-left: solid #dddddd 10px;
+  width: 96%;
+  margin-left: 10px;
   margin-top: 10px;
 }
 table.t_tasks td {
   border: none;
+  padding: 10px 5px 10px 10px;
+}
+
+table.t_task {
+  border-collapse: collapse;
+  border: none;
+  width: 96%;
+  margin: 10px 10px 10px 10px;
+}
+table.t_task td {
+  border: none;
+  padding: 10px 5px 10px 10px;
+}
+table.t_task td.td_note {
+  color:#888888;
+  padding-left:30px;
+}
+
+
+table.t_summary {
+  border-collapse: collapse;
+  border: none;
+  border-left: solid #dddddd 10px;
+  width: 90%;
+  margin-left:   10px;
+  margin-top:    10px;
+  margin-bottom: 40px;
+}
+table.t_summary td {
+  border: none;
   padding: 10px 10px 10px 10px;
+}
+
+table.messageBox {
+  display: none;
+  position: absolute;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.6);
+  color: #ffffff;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 200px;
+  padding: 5px 10px 5px 10px;
 }
