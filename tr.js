@@ -855,6 +855,22 @@ ons.bootstrap()
     $scope.recordCsv = str;
   }
 
+  /*---------------
+    FUNC: copyCsv
+  -----------------*/
+  $scope.copyCsv = function(id) {
+    var textarea = document.getElementById(id);
+    textarea.select();
+    var result = document.execCommand("copy");
+
+    if (result) {
+      alert('コピーしました。');
+    }
+    else {
+      alert('このブラウザではコピーできません。手動で全選択・コピーしてください。');
+    }
+  }
+
   /*===============
     MAIN
   =================*/
