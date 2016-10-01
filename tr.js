@@ -871,6 +871,28 @@ ons.bootstrap()
     }
   }
 
+  /*---------------
+    FUNC: mailCsv
+  -----------------*/
+  $scope.mailCsv = function(id)
+  {
+    switch (id) {
+      case 'configExportTaskCsv':
+        var subject  = 'タスクマスタ';
+        break;
+      case 'configExportRecordCsv':
+        var dt = new Date();
+        var subject  = '勤怠_' + $scope.month.date.getFullYear() + '年'
+                              + ('0' + ($scope.month.date.getMonth() + 1)).slice(-2) + '月';
+        break;
+      default:
+        var subject = '';
+    }
+    var body = document.getElementById(id).value;
+    var href = "mailto:?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = href;
+  }
+
   /*===============
     MAIN
   =================*/

@@ -532,6 +532,7 @@
     <ons-list-header>タスクマスタ</ons-list-header>
     <ons-list-item>
       <textarea ng-model="taskCsv" id="configExportTaskCsv" rows="8" style="width:100%"></textarea>
+      <ons-button modifier="outline" ng-click="mailCsv('configExportTaskCsv');">メールで送信</ons-button>
       <ons-button modifier="outline" ng-click="copyCsv('configExportTaskCsv');">クリップボードにコピー</ons-button>
       <br>
       <br>
@@ -541,6 +542,7 @@
     <ons-list-item>
       <select ng-model="month" ng-options="m.name for m in months" ng-change="updateRecordCsv()"></select>
       <textarea ng-model="recordCsv" id="configExportRecordCsv" rows="8" style="width:100%"></textarea>
+      <ons-button modifier="outline" ng-click="mailCsv('configExportRecordCsv');">メールで送信</ons-button>
       <ons-button modifier="outline" ng-click="copyCsv('configExportRecordCsv');">クリップボードにコピー</ons-button>
       <br>
       <br>
