@@ -1,3 +1,11 @@
+<?php
+// スクリプトの更新日付を返す
+function echoFiledate($filename) {
+  if (file_exists($filename)) {
+    echo date('YmdHis', filemtime($filename));
+  }
+}
+?>
 <!DOCTYPE html>
 <meta charset="UTF-8" />
 <!--<meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,9 +28,9 @@
 <!-- Android標準ブラウザ(一部) -->
 <link rel="shortcut icon" href="/icon_tr.png"><!-- ios7-calendar-outline.png -->
 
-<link href="./tr.css" rel="stylesheet"/>
-<script src='./tr.js'></script>
-<script src='./holidays.js'></script>
+<link href="./tr.css?date=<?php echoFiledate("./tr.css"); ?>" rel="stylesheet"/>
+<script src='./tr.js?date=<?php echoFiledate("./tr.js"); ?>'></script>
+<script src='./holidays.js?date=<?php echoFiledate("./holidays.js"); ?>'></script>
 
 <!-- *************************
 * タブバー
