@@ -368,6 +368,13 @@ ons.bootstrap()
   }
 
   /*---------------
+    FUNC: selectText
+  -----------------*/
+  $scope.selectText = function(e) {
+    e.target.setSelectionRange(0, e.target.value.length);
+  }
+
+  /*---------------
     EVENT: taskSelected
   -----------------*/
   $scope.$on('taskSelected', function(e, tid) {
@@ -684,6 +691,13 @@ ons.bootstrap()
     $scope.message = '保存しました。';
     $('#message_config').fadeIn('slow');
     setTimeout(function(){$('#message_config').fadeOut('slow');}, 2000);
+  }
+
+  /*---------------
+    FUNC: selectText
+  -----------------*/
+  $scope.selectText = function(e) {
+    e.target.setSelectionRange(0, e.target.value.length);
   }
 })
 /*------------------------------

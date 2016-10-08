@@ -148,13 +148,13 @@ function echoFiledate($filename) {
       </tr>
       <tr>
         <td>
-          <input type="tel" ng-model="in_start" class="text-input" maxlength="3" style="text-align:right; width:60px; font-size:140%;">
+          <input type="tel" ng-model="in_start" ng-click="selectText($event)" class="text-input" maxlength="3" style="text-align:right; width:60px; font-size:140%;">
         </td>
         <td>
-          <input type="tel" ng-model="in_end"   class="text-input" maxlength="3" style="text-align:right; width:60px; font-size:140%;">
+          <input type="tel" ng-model="in_end"   ng-click="selectText($event)" class="text-input" maxlength="3" style="text-align:right; width:60px; font-size:140%;">
         </td>
         <td>
-          <input type="tel" ng-model="in_rest"  class="text-input" maxlength="2" style="text-align:right; width:50px; font-size:140%;">
+          <input type="tel" ng-model="in_rest"  ng-click="selectText($event)" class="text-input" maxlength="2" style="text-align:right; width:50px; font-size:140%;">
         </td>
         <td>
           <span style="color:#888888">実働</span>
@@ -184,7 +184,7 @@ function echoFiledate($filename) {
           {{task.name}}
         </td>
         <td nowrap align="right">
-          <input type="tel" ng-model="task.hr" class="text-input" maxlength="3" value="{{task.hr}}" style="text-align:right; width:60px; font-size:140%;">
+          <input type="tel" ng-model="task.hr" ng-click="selectText($event)" class="text-input" maxlength="3" value="{{task.hr}}" style="text-align:right; width:60px; font-size:140%;">
           <ons-icon icon="ion-ios-close" ng-click="deleteTask(task.tid)" style="color:#bbbbbb;" size="18px"></ons-icon>
         </td>
       </tr>
@@ -412,13 +412,13 @@ function echoFiledate($filename) {
 
     <table style="text-align:center; margin: 20px 10px 20px 10px;">
       <tr>
-        <td>始業時間：</td> <td><input type="tel" ng-model="df_start" class="text-input" maxlength="3" style="width:60px; text-align:right;"></td>
+        <td>始業時間：</td> <td><input type="tel" ng-model="df_start" ng-click="selectText($event)" class="text-input" maxlength="3" style="width:60px; text-align:right;"></td>
       </tr>
       <tr>
-        <td>終業時間：</td> <td><input type="tel" ng-model="df_end"   class="text-input" maxlength="3" style="width:60px; text-align:right;"></td>
+        <td>終業時間：</td> <td><input type="tel" ng-model="df_end"   ng-click="selectText($event)" class="text-input" maxlength="3" style="width:60px; text-align:right;"></td>
       </tr>
       <tr>
-        <td>休憩時間：</td> <td><input type="tel" ng-model="df_rest"  class="text-input" maxlength="2" style="width:60px; text-align:right;"></td>
+        <td>休憩時間：</td> <td><input type="tel" ng-model="df_rest"  ng-click="selectText($event)" class="text-input" maxlength="2" style="width:60px; text-align:right;"></td>
       </tr>
     </table>
 
