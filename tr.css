@@ -40,15 +40,15 @@ table.t_task td.td_note {
 table.t_summary {
   border-collapse: collapse;
   border: none;
-  border-left: solid #dddddd 10px;
+  //border-left: solid #dddddd 10px;
   width: 90%;
-  margin-left:   10px;
+  margin-left:    0px;
   margin-top:    10px;
   margin-bottom: 40px;
 }
 table.t_summary td {
   border: none;
-  padding: 10px 10px 10px 10px;
+  padding: 4px 10px 4px 10px;
 }
 
 table.messageBox {

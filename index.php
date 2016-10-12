@@ -356,7 +356,13 @@ function echoFiledate($filename) {
 
     <table class="t_summary">
       <tr ng-repeat="sum in summary">
-        <td>{{sum.name}}</td>
+        <td>
+          <label class="checkbox">
+            <input type="checkbox" class="checkbox__input">
+            <div class="checkbox__checkmark"></div>
+            {{sum.name}}
+          </label>
+        </td>
         <td align="right" nowrap>
           {{sum.hr}}
         </td>
