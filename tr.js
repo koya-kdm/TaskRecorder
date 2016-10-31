@@ -59,6 +59,7 @@ ons.bootstrap()
   var month = dt.getMonth();
 
   // 年月の選択肢
+  dt.setDate(1); // 31日に実行したとき、±○ヵ月の計算ができないため。
   for (var i = -2; i <= 1; i ++)
   {
     dt.setMonth(month + i);
@@ -552,8 +553,8 @@ ons.bootstrap()
         break;
       case 'prevMonth':
         // start
-        startDate.setMonth(startDate.getMonth() - 1);
         startDate.setDate(1);
+        startDate.setMonth(startDate.getMonth() - 1);
         // end
         endDate.setDate(0);
         break;
@@ -937,6 +938,7 @@ ons.bootstrap()
   for (var i = -2; i <= 1; i ++)
   {
     var dt2 = new Date();
+    dt2.setDate(1); // 31日に実行したとき、±○ヵ月の計算ができないため。
     dt2.setMonth(month + i);
     months.push({name: dt2.getFullYear() + '年 ' + (dt2.getMonth() + 1) + '月', date: dt2});
   }
@@ -966,6 +968,7 @@ ons.bootstrap()
   for (var i = -2; i <= 1; i ++)
   {
     var dt2 = new Date();
+    dt2.setDate(1); // 31日に実行したとき、±○ヵ月の計算ができないため。
     dt2.setMonth(month + i);
     months.push({name: dt2.getFullYear() + '年 ' + (dt2.getMonth() + 1) + '月', date: dt2});
   }
