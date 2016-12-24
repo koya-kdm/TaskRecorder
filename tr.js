@@ -127,7 +127,10 @@ ons.bootstrap()
 
   // 勤怠情報
   var records = lsGetItem('records');
-  if (null != records) {
+  if (null != records &&
+      null != records[$scope.ymd.year] &&
+      null != records[$scope.ymd.year][$scope.ymd.month])
+  {
     // 勤怠
     $scope.tmr = records[$scope.ymd.year][$scope.ymd.month]; // This Month's Records
 
