@@ -60,8 +60,10 @@ ons.bootstrap()
 
   // 年月の選択肢
   dt.setDate(1); // 31日に実行したとき、±○ヵ月の計算ができないため。
-  for (var i = -2; i <= 1; i ++)
+  for (var i = -5; i <= 1; i ++)
   {
+    var dt = new Date();
+    dt.setDate(1);
     dt.setMonth(month + i);
     months.push({year: dt.getFullYear(), month: dt.getMonth() + 1});
   }
